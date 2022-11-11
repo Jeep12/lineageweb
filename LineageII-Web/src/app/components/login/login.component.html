@@ -1,0 +1,34 @@
+<div class="containerLogin fadeIn">
+
+  <form class="formLogin rainbow"  (ngSubmit)="login()" [formGroup]="loginUser">
+    <h1>Log In</h1>
+    <label for="Enter email">Enter email</label>
+    <input type="email" formControlName="email">
+    <label for="Enter password">Enter password</label>
+    <input type="password" formControlName="password">
+    <span class="captcha">
+      <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
+      </ngx-recaptcha2>
+    </span>
+
+    <button type="submit" class="btnLogIn mt-3">Log In</button>
+
+    <button class="btnGoogle mt-4"><i class="fa-brands fa-google-plus-g"></i> Ingresar con Google</button>
+
+
+    <button class="btnFacebook mt-1"> <i class="fa-brands fa-facebook-f"></i> Ingresar con Facebook</button>
+
+    <br>
+     <br>
+      <br>
+    <p>Aun no tienes cuenta? Registrate <a [routerLink]="['/registrar-usuario']">Aquí</a></p>
+
+
+
+    <p> Olvido su contraseña? click <a [routerLink]="['/recuperar-password']">Aquí</a></p>
+  </form>
+
+
+
+
+</div>

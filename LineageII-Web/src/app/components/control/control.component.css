@@ -1,0 +1,99 @@
+.control {
+  position: relative;
+  display: block;
+  margin-top: 100px;
+  background-color: green;
+}
+
+input,select,button {
+  background-color: #0F0E0E;
+  color: white;
+  border: none;
+  border: 1px solid black;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+}
+
+input:focus{
+
+  outline: none;
+}
+
+.panelUser {
+  width: 100%;
+  height: 00px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+.infoUser{
+  width: 650px;
+  height: 700px;
+  background-image: url("../../../assets/images/bgcart.jpg");
+  background-repeat:no-repeat;
+background-position: center center;
+  border: 13px solid #0F0E0E;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+}
+.infoUser ul {
+
+  width: 250px;
+  margin: 200px auto;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  background-color: green;
+}
+.infoUser ul li {
+  list-style: none;
+
+  background-color: red;
+
+}
+.showEmail{
+  width: 200px;
+  margin:auto;
+  display: block;
+  padding: 9px;
+  border: none;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+
+
+
+}
+.otroBox{
+  width: 500px;
+  background-color: #0F0E0E;
+
+}
+.btnsConfig {
+  width: 150px;
+  margin: 150px auto;
+  height: 300px;
+  text-align: center;
+
+}
+.btnsConfig button {
+  border: none;
+  width: 200px;
+  background-color: #141414;
+  padding: 5px;
+  margin-top:10px;
+  font-family: "Gamer4";
+}
+.btnsConfig button:hover {
+  border: none;
+  color: red;
+  text-decoration: line-through;
+  text-shadow: 0 0 5px #b96e0b, 0 0 25px #da3b0b, 0 0 50px #ff0800, 0 0 100px #f45b03, 0 0 200px #777777;
+  transform: scale(1.1);
+
+}
+

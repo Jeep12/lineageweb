@@ -1,0 +1,31 @@
+<div class="addNews">
+  <div class="boxFormAddNew">
+    <h1 class="text-start" style="color:white;font-family:Gamer4;padding:7px;">Post a news</h1>
+    <form action="" class="formAddNew">
+      <label for="">Tittle</label>
+      <br>
+      <input type="text" placeholder="Insert tittle">
+
+      <br>
+      <label for="">Notice</label>
+      <br>
+
+      <table class="buttons">
+        <tr>
+          <td>Tittle</td>
+          <td><button (click)="bold()">Bold</button></td>
+        </tr>
+      </table>
+      {{notice}}
+      <textarea [value]="notice" name="" id="" cols="30" rows="10" [ngModel]="notice"></textarea>
+      <br>
+      <label for="">Author</label>
+      <br>
+      <input type="text">
+      <br>
+      <input type="file" name="" id="">
+      <br>
+      <button>Send</button>
+    </form>
+  </div>
+</div>

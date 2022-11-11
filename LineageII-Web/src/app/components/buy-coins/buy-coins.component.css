@@ -1,0 +1,157 @@
+.containerBuyCoin {
+  text-align: center;
+}
+
+.containerBuyCoin h1 {
+  font-family: "Gamer4";
+  color: white;
+}
+
+.containerBuyCoin p {
+  font-family: Verdana, Geneva, Tahoma;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 10px;
+  margin: auto;
+
+}
+
+.containerBuyCoin p::first-letter {
+  font-size: 17px;
+  color: #E5CC6A;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-select {
+  background-color: #0F0E0E;
+  color: white;
+  width: 200px;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma;
+  border-radius: 0px;
+
+}
+option {
+  font-family: Verdana, Geneva, Tahoma;
+
+}
+
+.form-select::-webkit-scrollbar {
+  display: none;
+}
+
+.form-select:focus {
+  outline: none !important;
+  border: 1px solid #FFD700;
+  box-shadow: 0 0 10px #1a1a1a;
+}
+
+
+.form-select option:focus,
+.form-select option:active,
+.form-select option:checked {
+  text-align: center;
+  background: linear-gradient(#E5CC6A, #FFD700);
+  transform: scale(1.2);
+  border: 2px solid #685903;
+  transition-duration: 1s;
+}
+.input-number{
+
+  width: 80px;
+  padding: 0 12px;
+  vertical-align: top;
+  text-align: center;
+  outline: none;
+  background-color: #0F0E0E;
+  color:white;
+
+
+}
+.input-number,
+.input-number-decrement,
+.input-number-increment{
+  border :1px solid #FFD700;
+  height: 40px;
+  user-select: none;
+}
+.input-number-decrement,
+.input-number-increment{
+
+
+  display: inline-block;
+  width: 30px;
+  line-height: 38px;
+  background: #f1f1f1;
+  color: #444;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+
+  }
+.input-number-decrement{
+  border: none;
+  background-color: #FFD700;
+}
+.input-number-increment{
+  border: none;
+  background-color: #FFD700;
+}
+.select-streamer {
+  background-color: #0F0E0E;
+  color: white;
+  width: 200px;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma;
+  border-radius: 0px;
+  border :1px solid #FFD700;
+  height: 40px;
+  appearance: none;
+}
+
+.select-streamer option:hover,
+.select-streamer option:focus,
+.select-streamer option:checked{
+  text-align: center;
+
+  border: 2px solid #685903;
+
+}
+.btnBuy {
+  border: none;
+  background-color: #FFD700;
+  font-family: "Gamer4";
+  color: white;
+  width: 100px;
+  margin: 20px auto;
+  padding: 7px;
+}
+.showBuy {
+  width: 100%;
+
+}
+.showBuy ul {
+  width: 250px;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma;
+
+  left: 10px;
+}
+.showBuy ul li {
+  list-style: none;
+
+  text-align: start;
+  color: #FFD700;
+}
+.showBuy ul li span {
+  color: white;
+}
+fieldset{
+
+  border: 2px solid #FFD700;
+}
+legend {
+  color: white;
+}

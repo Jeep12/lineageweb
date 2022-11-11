@@ -1,0 +1,66 @@
+<div class="containerBuyCoin">
+  <h1>Buy coins</h1>
+  <p style="color: white;">
+    To buy Aklas Coin on our server, you need to choose your payment option, enter the
+    amount of money you are willing to pay and proceed with the payment on our payment partner's website.
+    <br>
+    Once the payment is done, you will receive the number of Ashenvale coins according to the amount you have
+    paid out.
+
+  </p>
+  <p style="color:gold">
+    Once the payment is made, you must choose the character to send the coins to the server
+  </p>
+  <hr>
+  <form action="">
+
+    <fieldset >
+      <legend>Payment method</legend>
+
+      <select class="form-select" multiple aria-label="multiple select example" #method >
+        <option value="Mercado Pago">Mercado Pago (ARS)</option>
+        <option value="Pay Pal">Pay Pal (USD)</option>
+        <option value="Uala">Uala (ARS)</option>
+      </select>
+
+
+
+    </fieldset>
+
+    <label for="">Amount of coins</label>
+    <br>
+    <span class="input-number-decrement">–</span><input class="input-number" #ammount type="text" value="5"><span
+      class="input-number-increment">+</span>
+    <br>
+    <hr>
+
+    <br>
+    <label for="">Help a streamer </label>
+    <br>
+    <select name="" id="" class="select-streamer">
+      <option value="">Streamer </option>
+      <option value="">Streamer </option>
+
+      <option value="">Streamer </option>
+      <option value="">Streamer </option>
+
+    </select>
+    <span>This is optional </span>
+
+    <br>
+    <button class="btnBuy">Buy</button>
+  </form>
+  <hr>
+  <p style="color:gold">Please make sure the information below is correct before continuing.</p>
+  <hr>
+  <div class="showBuy">
+
+    <ul>
+      <li>Amount: <span>{{ammount.value}}</span></li>
+      <li>Method: <span>{{method.value}}</span></li>
+      <li>Credits:<span>{{ammount.value}}</span></li>
+      <li>Bonus: <span>0</span></li>
+      <li>Total: <span>{{ammount.value}}</span></li>
+    </ul>
+  </div>
+</div>

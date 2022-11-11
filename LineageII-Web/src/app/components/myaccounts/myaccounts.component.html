@@ -1,0 +1,159 @@
+<div class="containerMyAccounts">
+  <div class="row">
+    <div class="col-sm-5 myaccounts">
+      <h1>My Accounts</h1>
+
+      <span *ngIf="usuario.email != '' else loader">
+        {{usuario.email}}
+      </span>
+      <ng-template #loader>
+        <div class="spinner-grow" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </ng-template>
+      {{usuario.uid}}
+
+      <div class="boxSearch">
+        <input type="text" placeholder="Search Account" class="rainbow inputSearch">
+        <button class="btnSearch rainbow"><i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="alert alert-warning" role="alert" style="width: 350px;margin:15px auto;">
+        <i class="fa-solid fa-circle-info"></i>&nbsp; Maximum four characters per account
+      </div>
+      <div class="accounts">
+        <ul>
+          <li class="list" *ngFor="let account of accounts">
+            <span type="button" (click)="getCharacters(account.login)" >
+              <button class="btnChangePassword">
+                <a >{{account.login}}</a>
+              </button>
+            </span>
+            <span class="boxChangePassword">
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btnChangePassword">
+                <i class="fa-solid fa-lock"></i>
+              </button>
+            </span>
+          </li>
+
+
+
+
+        </ul>
+      </div>
+      <app-modal-change-password></app-modal-change-password>
+      <hr>
+      <div class="createAccount">
+        <h1>Create account for the game</h1>
+        <p>
+          <br>
+          <button class="btn btnCreate" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Create account
+          </button>
+        </p>
+        <app-create-account-game  [email]="usuario.email"></app-create-account-game>
+      </div>
+    </div>
+    <div class="col-sm-7 ">
+      <div class="myChars">
+        <h1>My Characters</h1>
+
+        <ul>
+          <span *ngIf="selectAccount == true else noSelect">
+            <span *ngIf="existChar">
+              <li type="button" *ngFor="let char of chars"  [ngClass]="{'online': char.online === 1, 'offline' : char.online === 0 }" ><a
+                  (click)="charSelect(char.char_name,char.charId)">{{char.char_name}} </a></li>
+            </span>
+          </span>
+
+
+
+          <ng-template #noSelect>
+            <span>
+              <div class="alert alert-info" role="alert" style="width: 350px;margin:15px auto;">
+                <i class="fa-regular fa-hand-pointer"></i> Select a game account
+              </div>
+            </span>
+          </ng-template>
+          <span *ngIf="existChar == false ">
+            <div class="alert alert-light" role="alert" style="width: 450px;margin:15px auto;">
+              This account does not have any character created <i class="fa-solid fa-exclamation"></i>
+            </div>
+          </span>
+        </ul>
+
+      </div>
+      <div class="Inventory">
+        <div class="path">
+          {{accountNameSelect}}
+          <span class="" *ngIf="nameCharSelect != ''">
+            <i  *ngIf="nameCharSelect != ''" class="fa-solid fa-right-long"></i> {{nameCharSelect}}
+          </span>
+        </div>
+
+        <span *ngIf="selectChar == true && existChar == true ">
+          <ul>
+            <li type="button">
+              <a (click)="getStats()">
+                Stats
+              </a>
+            </li>
+            <li type="button">
+              <a (click)="getInventory()">Inventory</a>
+            </li>
+            <li type="button">
+              <a (click)="getWarehouse()">Warehouse</a>
+            </li>
+            <li type="button">
+              <a >Clan</a>
+            </li>
+
+
+          </ul>
+        </span>
+
+
+        <div class="containerCharStatsInv " *ngIf="existChar == true">
+          <div *ngIf="selectInv==true" >
+            <div class="boxSearch">
+              <input type="text" placeholder="Search Item" class="rainbow inputSearch">
+              <button class="btnSearch rainbow"><i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>            <hr>
+            <div class="inventario" *ngIf="selectInv==true">
+              <div class="item" *ngFor="let item of inv">
+                <img [src]="'assets/images/icons/' + item.item_id + '.png'"  alt="" srcset="">
+
+              </div>
+            </div>
+
+          </div>
+          <div class="stats" *ngIf="selectStats">
+              <span *ngFor="let stat of stats">
+                <h1>  {{stat.char_name}} Lv {{stat.level}} <span *ngIf="stat.online == 0 else online"><i class="fa-solid fa-circle" style="color:red;"></i></span><ng-template #online><i class="fa-solid fa-circle" style="color:green;"></i></ng-template></h1>
+                <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </span>
+          </div>
+
+        </div>
+      </div>
+      <br>
+      <button (click)="deleteItems()" class="btnCreate btn">Prueba</button>
+    </div>
+
+  </div>
+</div>

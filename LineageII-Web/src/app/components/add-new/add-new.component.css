@@ -1,0 +1,25 @@
+.addNews {
+  width: 80%;
+  margin: auto;
+}
+.addNews form {
+  width: 500px;
+  text-align: center;
+  color: white;
+  font-family: "Gamer4";
+  border: 1px groove white;
+}
+.addNews form input {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+
+}
+textarea {
+  width: 80%;
+}
+.buttons tr td {
+  padding: 10px;
+  font-family: "Gamer4";
+
+}

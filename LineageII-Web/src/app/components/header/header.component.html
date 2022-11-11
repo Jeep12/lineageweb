@@ -1,0 +1,78 @@
+<header class="fixed-top">
+
+  <div class="social">
+
+          <div >
+              <h1 class="Logo">Lineage II Aklas</h1>
+
+             </div>
+
+                <div class="redesSociales">
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                        <li><i class="fa-brands fa-discord"></i></li>
+
+                    </ul>
+                </div>
+
+
+  </div>
+  <nav class="navbar navbar-expand-lg  menu">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
+          <div class="navbar-nav ">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/home']">Home</a>
+            <a class="nav-link" [routerLink]="['/features']">Features</a>
+            <a class="nav-link"  [routerLink]="['/store']" >Store</a>
+            <a class="nav-link"  [routerLink]="['/media']">Media</a>
+            <a class="nav-link" [routerLink]="['/download']">Download</a>
+
+
+          </div>
+        </div>
+      </div>
+      <span class="boxPanel">
+        <!-- <li class="cart" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="fa-solid fa-cart-shopping"></i> -->
+        <!-- <a class="btnLogin" (click)="logout()" *ngIf="isLogg==true">LogOut</a> -->
+       <span style="border-right: 1px solid rgb(39, 39, 39);">
+
+         <i style="color:white;" class="fa-solid fa-cart-shopping"></i>&nbsp;&nbsp;&nbsp;
+       </span>
+        <div class="dropdown" *ngIf="isLogg; else temp">
+          <a type="button" onclick="showDropdownContent()" class="btnPanel" id="btnPanel">Panel</a>
+          <div class="dropdown-content" id="bodyDropdown">
+              <ul>
+                <li type="button" [routerLink]="['/admin']" *ngIf="usuarios.access == 1"> <i class="fa-solid fa-screwdriver-wrench"></i> Admin</li>
+                <hr>
+                <li type="button" [routerLink]="['/control']"   ><i class="fa-solid fa-user-gear"></i> Control</li>
+                <hr>
+                <li  type="button" [routerLink]="['/myaccounts']"><i class="fa-solid fa-gamepad"></i> Accounts</li>
+                <hr>
+                <li type="button"(click)="logout()"  ><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+                <hr>
+              </ul>
+          </div>
+        </div>
+
+        <ng-template #temp>
+          <div style="display:inline-block;margin-left:15px;position:relative;bottom:2.5px;">
+
+            <a [routerLink]="['/login']" *ngIf="isLogg == false" class="btnLogin" >Log In</a>
+
+            <a [routerLink]="['/signup']" *ngIf="isLogg == false" class="btnLogin">Sign UP</a>
+          </div>
+
+        </ng-template>
+
+      </span>
+
+    </nav>
+
+
+
+</header>

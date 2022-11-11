@@ -1,0 +1,14 @@
+.containerAdmin {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-color: #0F0E0E;
+  height: 700px;
+}
+.addNews {
+  width: 100%;
+}
+.boxFormAddNew {
+  width: 50%;
+  margin: auto;
+}

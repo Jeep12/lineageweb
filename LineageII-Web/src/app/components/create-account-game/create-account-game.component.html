@@ -1,0 +1,14 @@
+<div class="collapse" id="collapseExample">
+  <div class="card card-body boxFormCreateAccount">
+      <form  (ngSubmit)="register()" [formGroup]="formRegister">
+        <label for="Account name">Enter name</label>
+          <input type="text" placeholder="Enter name" formControlName="login">
+          <label for="Account password">Enter Password</label>
+          <input type="password" placeholder="Enter Password" formControlName="password">
+          <label for="Account name">Repeat Password </label>
+          <input type="password" placeholder="Repeat Password" formControlName="repeatPassword">
+          <button class="btn btnRegister">Register</button>
+
+      </form>
+  </div>
+</div>

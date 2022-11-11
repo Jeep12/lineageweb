@@ -1,0 +1,39 @@
+<div class="control row">
+
+
+
+
+
+    <div class="panelUser">
+      <div class="infoUser">
+
+        <span *ngIf="usuario.email != '' else loader">
+
+        <input class="showEmail" type="text" readonly value="userMail" [(ngModel)]="usuario.email" >
+
+        <hr>
+        <div class="btnsConfig">
+
+          <button>Change Password</button>
+          <button>Recovery Password</button>
+        </div>
+
+      </span>
+      <ng-template #loader>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </ng-template>
+      <p style="padding: 10px; color:white;font-family:Gamer4;">Count characters: 24 | Count accounts: 6</p>
+      </div>
+      <div class="otroBox">
+
+        <app-buy-coins></app-buy-coins>
+      </div>
+
+    </div>
+
+</div>
+

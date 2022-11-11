@@ -1,0 +1,193 @@
+.containerMyAccounts{
+  position: absolute;
+  height: 1500px;
+  width: 100%;
+  background: #0F0E0E;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+padding: 10px;
+color: white;
+}
+.myaccounts {
+  height: 1100px;
+
+}
+.myaccounts h1 {
+  font-family: "Gamer4";
+  font-size: 50px;
+}
+.accounts ul  {
+  list-style: none;
+  width: 300px;
+  margin: 30px auto;
+}
+.accounts ul li {
+    background-color: #111010;
+    padding: 10px;
+    display: inline-flexbox;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border: 1px solid black;
+    box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+}
+.list:hover{
+  color: red;
+  text-decoration: line-through;
+  text-shadow: 0 0 5px #b96e0b, 0 0 25px #da3b0b, 0 0 50px #ff0800, 0 0 100px #f45b03, 0 0 200px #777777;
+  transform: scale(1.1);
+
+}
+.btnChangePassword {
+  background-color: rgba(255, 0, 0, 0);
+  padding: 5px;
+  border: none;
+  color: white;
+  margin-left: 5px;
+}
+.account {
+  padding: 5px;
+
+}
+.boxChangePassword{
+  border-left: 2px solid #363636;
+   margin-left: 10px;
+
+}
+.boxSearch {
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+}
+.inputSearch {
+  outline: none;
+  padding: 5px;
+  height: 100%;
+  width:250px;
+}
+.btnSearch{
+  height: 100%;
+  width: 50px;
+  background-color: #ff000000;
+  color: white;
+}
+.createAccount {
+
+}
+.createAccount h1 {
+  font-size: 30px;
+  font-family: "Gamer4";
+
+}
+.btnCreate {
+  background-color: #d80f0f;
+  color: white;
+  border-radius: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.myChars {
+}
+.myChars h1 {
+  font-family: "Gamer4";
+  font-size: 50px;
+}
+.myChars ul {
+}
+.myChars ul li {
+  display: inline-block;
+  list-style: none;
+
+  font-family: "Gamer4";
+  padding: 15px;
+  background-color: #111010;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  margin-left: 15px;
+  font-size: 30px;
+}
+.myChars ul li:hover {
+
+  transform: scale(1.1);
+}
+.Inventory {
+  background-color: #131313;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  width: 80%;
+  margin: 20px auto;
+}
+.Inventory ul li {
+  background-color: #111010;
+  box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 4px 23px 14px rgba(0,0,0,0.75);
+  display: inline-block;
+  list-style: none;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  font-family: "Gamer4";
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  margin-left: 15px;
+  padding: 10px;
+}
+.Inventory ul li:hover {
+  color: red;
+  text-decoration: line-through;
+  text-shadow: 0 0 5px #b96e0b, 0 0 25px #da3b0b, 0 0 50px #ff0800, 0 0 100px #f45b03, 0 0 200px #777777;
+  transform: scale(1.1);
+}
+.containerCharStatsInv {
+  width: 100%;
+  height: 500px;
+  border-radius: 1px;
+  background-color: #111010;
+}
+.inventario {
+  outline-offset: -5px;
+  display: grid;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border-top: 1px solid rgb(50, 50, 50);
+  border-bottom: 1px solid rgb(81, 80, 80);
+  grid-template-columns: repeat(auto-fill, minmax(32px, 1fr));
+}
+.path {
+  width:100%;
+  text-align: start;
+  font: italic small-caps bold 12px/30px Verdana, serif;
+  letter-spacing: 3px;
+  padding: 10px;
+  border-bottom: 1px solid white;
+  font-weight: solid;
+}
+.online {
+  border: 3px solid green;
+}
+.online:hover {
+  color: green;
+  text-decoration: line-through;
+  text-shadow: 0 0 5px #945707, 0 0 25px #059c33, 0 0 50px #0acf55, 0 0 100px #03f45f, 0 0 200px #0d6434;
+}
+.offline {
+  border: 3px solid red;
+
+}
+.offline:hover {
+  color: red;
+  text-decoration: line-through;
+  text-shadow: 0 0 5px #b96e0b, 0 0 25px #da3b0b, 0 0 50px #ff0800, 0 0 100px #f45b03, 0 0 200px #777777;
+}

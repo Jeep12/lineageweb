@@ -1,0 +1,20 @@
+<div class="containerSignUp fadeIn">
+  <form class="rainbow" (ngSubmit)="register()" [formGroup]="registerUser">
+    <h1>Sign Up</h1>
+    <label for="Enter email">Enter Email</label>
+    <input type="email" placeholder="example@gmail.com" formControlName="email">
+
+
+    <label for="Enter password">Enter Password</label>
+    <input type="password" placeholder="Insert password" formControlName="password">
+
+    <label for="Repeat password">Repeat Password</label>
+    <input type="password" placeholder="Repeat password" formControlName="repeatPassword">
+    <span class="captcha">
+      <ngx-recaptcha2 #captchaElem [siteKey]="siteKey" formControlName="recaptcha">
+      </ngx-recaptcha2>
+    </span>
+
+    <button type="submit" class="btnRegister mt-3"><i class="fa-solid fa-user-plus"></i>&nbsp;&nbsp;Register</button>
+  </form>
+</div>
